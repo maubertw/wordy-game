@@ -13,7 +13,8 @@ nav {
   background-color: lightgray;
   padding-left: 20px;
   padding-right: 20px;
-  margin-bottom: 20px
+  margin-bottom: 20px;
+  align-items: baseline;
 }
 
 a {
@@ -35,6 +36,24 @@ form div {
   display: inline-block;
 }
 
+/* user home page */
+
+table {
+  width: 30vw;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
 #app-wrapper {
   display: flex;
   flex-direction: column;
@@ -48,6 +67,12 @@ form div {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.user-home button {
+  border-radius: 6px;
+  background-color: lightgray;
+  width: 100px;
 }
 
 .home-headings {
@@ -64,3 +89,82 @@ form div {
   width: 400px;
   margin: 50px
 }
+
+.invite input {
+  padding: 8px;
+  border-radius: 6px
+}
+
+
+/* Game parts */
+
+.score-board {
+  display: flex;
+  justify-content: space-around;
+  min-height: 50px;
+  min-width: 300px;
+  max-height: 50px;
+  max-width: 300px;
+
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 80vh;
+}
+
+.rack {
+  min-height: 40px;
+  min-width: 40px;
+  max-height: 600px;
+  max-width: 600px;
+  border-bottom: solid 2px black;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 540px;
+  min-width: 540px;
+  max-height: 540px;
+  max-width: 540px;
+
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.square {
+  min-height: 31px;
+  min-width: 31px;
+  max-height: 31px;
+  max-width: 31px;
+  border: solid 1px black;
+  text-align: center
+}
+
+.tile {
+  border: solid 1px black;
+  min-height: 30px;
+  min-width: 30px;
+  max-height: 30px;
+  max-width: 30px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center
+}
+
+
+
+

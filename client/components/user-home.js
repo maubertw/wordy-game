@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
+import {NavLink} from 'react-router-dom'
 
 /**
  * COMPONENT
@@ -33,18 +34,22 @@ export const UserHome = props => {
       <div className='home-headings'>
         <h2>Current Games & Invitations</h2>
       </div>
-      <div>
+      <table>
+        <tr>
+            <th>Players</th>
+            <th>Scores / Accepted?</th>
+        </tr>
         {
           dummyGames.map(game => {
             return (
-              <div>
-                <p>{game.opponent}</p>
-                {game.score ? <p>{game.score}</p> : <button>Accept Challange!</button>}
-              </div>
+              <tr>
+                <td>{game.opponent}</td>
+                {game.score ? <td><NavLink to='/game'>{game.score}</NavLink></td> : <td><button>Accept Challange!</button></td>}
+              </tr>
             )
           })
         }
-      </div>
+      </table>
 
 
     </div>
