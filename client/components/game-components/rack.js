@@ -17,4 +17,7 @@ class Rack extends Component {
   }
 }
 
+//connect this with player 1 letters
+//
+
 export default Rack;
